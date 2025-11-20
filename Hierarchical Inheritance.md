@@ -1,6 +1,7 @@
 # Exp.No:25  
 ## Hierarchical Inheritance
 
+
 ### AIM  
 To write a Python program to get the employee and doctor details and display them using hierarchical inheritance. Create a parent (base) class named `Details` and two child (derived) classes named `Employee` and `Doctor`.
 
@@ -21,29 +22,92 @@ To write a Python program to get the employee and doctor details and display the
 9. **Terminate the program.**
 
 ### PROGRAM
-```
-Reg.No: 212222060182
-Name: Preethika S
 
-class value:
-    def get_values(self,a,b):
-        self.a=a
-        self.b=b
-        self.c=a-b
-class subtract(value):
-    def sub(self):
-        print(" subraction value1 : ",a)
-        print(" subraction value2 : ",b)
-        print("Subracted value :",self.c)
-a=int(input()) 
-b=int(input()) 
-obj=subtract()
-obj.get_values(a,b)
-obj.sub()
+```python
+Reg.No: 212222060182
+Name : Preethika S
+
+class Details:
+    def __init__(self):
+        self.__id = ""
+        self.__name = ""
+        self.__gender = ""
+
+    def setData(self, id, name, gender):
+        self.__id = id
+        self.__name = name
+        self.__gender = gender
+
+    def showData(self):
+        print("Id: ", self.__id)
+        print("Name: ", self.__name)
+        print("Gender: ", self.__gender)
+
+
+class Employee(Details):  # Inheritance
+    def __init__(self):
+        super().__init__()
+        self.__company = ""
+        self.__dept = ""
+
+    def setEmployee(self, id, name, gender, comp, dept):
+        self.setData(id, name, gender)
+        self.__company = comp
+        self.__dept = dept
+
+    def showEmployee(self):
+        self.showData()
+        print("Company: ", self.__company)
+        print("Department: ", self.__dept)
+
+
+class Doctor(Details):  # Inheritance
+    def __init__(self):
+        super().__init__()
+        self.__hospital = ""
+        self.__dept = ""
+
+    def setEmployee(self, id, name, gender, hos, dept):
+        self.setData(id, name, gender)
+        self.__hospital = hos
+        self.__dept = dept
+
+    def showEmployee(self):
+        self.showData()
+        print("Hospital: ", self.__hospital)
+        print("Department: ", self.__dept)
+
+
+# Input
+id = int(input())
+name = input()
+gender = input()
+comp = input()
+dept = input()
+
+id1 = int(input())
+nam = input()
+gen = input()
+hosp = input()
+dep = input()
+
+# Creating and displaying Employee object
+print("Employee Object")
+e = Employee()
+e.setEmployee(id, name, gender, comp, dept)
+e.showEmployee()
+
+# Creating and displaying Doctor object
+print("\nDoctor Object")
+d = Doctor()
+d.setEmployee(id1, nam, gen, hosp, dep)
+d.showEmployee()
+
 ```
 
 ### OUTPUT  
-<img width="1013" height="307" alt="image" src="https://github.com/user-attachments/assets/0bbe4bed-4812-4757-98e0-80350bdbd1c9" />
+![image](https://github.com/user-attachments/assets/45d0cbc2-1be3-487b-9205-eee868963420)
+
 
 ### RESULT
-Thus , a Python program to Calculate subraction using hierarchical inheritance is executed successfully.
+Thus the program to get the employee and doctor details and display them using hierarchical inheritance has been implemented and executed successfully.
