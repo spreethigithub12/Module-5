@@ -1,12 +1,10 @@
 # Exp.No:22  
 ## Destructor
 
----
 
 ### AIM  
 To create a Python class `Student` with a destructor.
 
----
 
 ### ALGORITHM
 
@@ -17,15 +15,32 @@ To create a Python class `Student` with a destructor.
 5. Use the `del` statement to delete the object `s2`. This triggers the `__del__` method (destructor), and the respective print statements are executed.  
 6. Terminate the program.
 
----
-
 ### PROGRAM
 
-```
+```python
+Reg.No: 212222060182
+Name : Preethika S
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def printDetail(self):
+        print(f"My name is {self.name} and I am {self.age} years old.")
+
+    def __del__(self):
+        print(f"{self.name} student is deleted.")
+
+s1 = Student("Vishvajit Rao", 22)
+s1.printDetail()
+del s1
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/87b2da7f-583a-41a7-8cec-0536561d6f7e)
 
 
 ### RESULT
+Thus the program to create a Python class Student with a destructor has been implemented and executed successfully.
