@@ -32,37 +32,48 @@ To write a Python program to get the name, age, and ID of a person and display t
 
 ### PROGRAM
 
-```
+```python
 Reg.No: 212222060182
-Nmae: Preethika S
-class Person:
-    def get_name(self, name):
+Name: Preethika S
+
+class Parent:
+    def __init__(self, name):
         self.name = name
 
-class Employee(Person):
-    def get_age(self, age):
+    def getName(self):
+        return self.name
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)
         self.age = age
 
-class Location(Employee):
-    def get_location(self, location):
-        self.location =location 
+    def getAge(self):
+        return self.age
 
-    def display(self):
-        print(self.name, self.age, self.location)
+class Grandchild(Child):
+    def __init__(self, name, age, id):
+        super().__init__(name, age)
+        self.id = id
 
+    def getid(self):
+        return self.id
+
+# Input from user
 name = input()
 age = int(input())
-location  = str(input())
+id = int(input())
 
-person = Location ()
-person.get_name(name)
-person.get_age(age)
-person.get_location(location)
-person.display()
+# Object creation and method calls
+gc = Grandchild(name, age, id)
+print(gc.getName(), gc.getAge(), gc.getid())
+
+
 ```
 
 ### OUTPUT
-<img width="895" height="294" alt="image" src="https://github.com/user-attachments/assets/a18421cc-c585-4099-95b0-c853630b1c6f" />
+![image](https://github.com/user-attachments/assets/e0d29390-517a-4cde-918c-9d46c8c3adb8)
+
 
 ### RESULT
-Thus,a Python program to get the name, age, and location of a person and display them using multilevel inheritance are verified.
+Thus the program to get the name, age, and ID of a person and display them using multilevel inheritance has been implemented and executed successfully.
