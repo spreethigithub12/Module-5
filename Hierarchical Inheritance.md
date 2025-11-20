@@ -1,12 +1,8 @@
 # Exp.No:25  
 ## Hierarchical Inheritance
 
----
-
 ### AIM  
 To write a Python program to get the employee and doctor details and display them using hierarchical inheritance. Create a parent (base) class named `Details` and two child (derived) classes named `Employee` and `Doctor`.
-
----
 
 ### ALGORITHM
 
@@ -24,17 +20,30 @@ To write a Python program to get the employee and doctor details and display the
 8. **Call the `display_details()` method** for both objects to print the details.
 9. **Terminate the program.**
 
----
-
 ### PROGRAM
 ```
+Reg.No: 212222060182
+Name: Preethika S
 
-
+class value:
+    def get_values(self,a,b):
+        self.a=a
+        self.b=b
+        self.c=a-b
+class subtract(value):
+    def sub(self):
+        print(" subraction value1 : ",a)
+        print(" subraction value2 : ",b)
+        print("Subracted value :",self.c)
+a=int(input()) 
+b=int(input()) 
+obj=subtract()
+obj.get_values(a,b)
+obj.sub()
 ```
 
 ### OUTPUT  
-
-(Output Screenshot)  
-
+<img width="1013" height="307" alt="image" src="https://github.com/user-attachments/assets/0bbe4bed-4812-4757-98e0-80350bdbd1c9" />
 
 ### RESULT
+Thus , a Python program to Calculate subraction using hierarchical inheritance is executed successfully.
